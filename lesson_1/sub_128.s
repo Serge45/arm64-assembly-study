@@ -22,9 +22,10 @@ _start:
     movk x3, #0x4321, lsl #48
     b sub_128
 sub_128:
-    sbc x0, x0, x2
+    sbcs x0, x0, x2
     sbc x1, x1, x3
 exit:
     mov x0, #0
     mov x8, #93
     svc #0
+
